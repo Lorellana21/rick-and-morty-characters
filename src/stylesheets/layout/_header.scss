@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__img-container {
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+    & img {
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      margin: 20px;
+      width: 600px;
+    }
+  }
+}
