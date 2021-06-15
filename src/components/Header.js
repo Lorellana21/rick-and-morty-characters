@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../images/Rick_and_Morty_logo.png";
-import "../stylesheets/layout/_header.scss";
 
 class Header extends React.Component {
   render() {
