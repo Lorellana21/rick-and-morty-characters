@@ -1,4 +1,4 @@
-# <img src="./public/favicon.jpg" width="50"/> **Rick and Morty Browser**
+# <img <img src="./public/favicon.jpg" width="50"/> **Rick and Morty Browser**
 
 ## **Description:**
 
