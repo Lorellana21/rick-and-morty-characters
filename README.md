@@ -1,4 +1,4 @@
-# <img <img src="https://icon-library.com/images/rick-and-morty-icon/rick-and-morty-icon-15.jpg" width="50"/> **Rick and Morty Browser**
+# <img src="https://icon-library.com/images/rick-and-morty-icon/rick-and-morty-icon-15.jpg" width="50"/> **Rick and Morty Browser**
 
 ## **Description:**
 
