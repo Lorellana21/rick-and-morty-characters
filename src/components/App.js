@@ -3,6 +3,7 @@ import "../stylesheets/App.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 import getApiData from "../services/getDataFromApi";
+import CharacterList from "./CharacterList";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -11,12 +12,14 @@ const App = () => {
     //ejecutar cosas en el montaje
     getApiData().then((charactersData) => {
       setCharacters(charactersData);
+      //console.log(charactersData);
     });
   }, []);
-  
+
   return (
     <>
       <Header />
+      <CharacterList characters={characters} />
       <Footer />
     </>
   );

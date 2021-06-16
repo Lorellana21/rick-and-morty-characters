@@ -7,6 +7,7 @@ const getApiData = () => {
           image: character.image,
           name: character.name,
           species: character.species,
+          gender: character.gender,
           id: character.id,
         };
       });
