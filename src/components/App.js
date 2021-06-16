@@ -25,11 +25,41 @@ const App = () => {
     ls.set(`characters`, characters);
   }, [characters]);
 
+  const handleFilter = (data) => {
+    if (data.key === "name") {
+      setFilterName(data.value);
+    } else if (data.key === "gender") {
+      setFilterGender(data.value);
+    } else if (data.key === "species") {
+      setFilterSpecies(data.value);
+    }
+  };
+
+  //render
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      if (filterGender === "all") {
+        return true;
+      } else {
+        return character.gender === filterGender;
+      }
+    })
+    .filter((character) => {
+      if (filterSpecies === "all") {
+        return true;
+      } else {
+        return character.species === filterSpecies;
+      }
+    });
+
   return (
     <>
       <Header />
-      <Filters />
-      <CharacterList characters={characters} />
+      <Filters handleFilter={handleFilter} />
+      <CharacterList characters={filteredCharacters} />
       <Footer />
     </>
   );

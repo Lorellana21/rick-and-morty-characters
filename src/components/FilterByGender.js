@@ -1,15 +1,26 @@
 import React from "react";
 
 const FilterByGender = (props) => {
+  const handleChange = (ev) => {
+    props.handleFilter({
+      value: ev.target.value,
+      key: "gender",
+    });
+  };
   return (
     <>
       <label className="form__input-label" htmlFor="gender">
         Filter by gender:
       </label>
-      <select className="form__input-text" name="gender" id="gender">
+      <select
+        className="form__input-text"
+        name="gender"
+        id="gender"
+        onChange={handleChange}
+      >
         <option value="all">All</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
       </select>
     </>
   );

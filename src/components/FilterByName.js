@@ -1,6 +1,17 @@
 import React from "react";
 
 const FilterByName = (props) => {
+  const handleChange = (ev) => {
+    props.handleFilter({
+      value: ev.target.value,
+      key: "name",
+    });
+  };
+
+  const inputEnterHandler = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
     <>
       <label className="form__input-label" htmlFor="name">
@@ -12,6 +23,8 @@ const FilterByName = (props) => {
         name="name"
         id="name"
         placeholder="Search"
+        onChange={handleChange}
+        onSubmit={inputEnterHandler}
       />
     </>
   );
