@@ -23,6 +23,7 @@ const FilterByName = (props) => {
         name="name"
         id="name"
         placeholder="Search"
+        value={props.filterName}
         onChange={handleChange}
         onSubmit={inputEnterHandler}
       />

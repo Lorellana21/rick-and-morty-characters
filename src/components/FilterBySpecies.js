@@ -16,9 +16,10 @@ const FilterBySpecies = (props) => {
         className="form__input-text"
         name="species"
         id="species"
+        value={props.filterSpecies}
         onChange={handleChange}
       >
-        <option value="all">All</option>
+        <option value="">All</option>
         <option value="Human">Human</option>
         <option value="Alien">Alien</option>
       </select>

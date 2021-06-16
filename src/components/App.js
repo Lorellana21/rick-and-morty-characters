@@ -9,9 +9,11 @@ import Filters from "./Filters";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
-  const [filterName, setFilterName] = useState("");
-  const [filterGender, setFilterGender] = useState("all");
-  const [filterSpecies, setFilterSpecies] = useState("");
+  const [filterName, setFilterName] = useState(ls.get("filterName", ""));
+  const [filterGender, setFilterGender] = useState(ls.get("filterGender", ""));
+  const [filterSpecies, setFilterSpecies] = useState(
+    ls.get("filterSpecies", "")
+  );
 
   useEffect(() => {
     if (characters.length === 0) {
@@ -24,6 +26,18 @@ const App = () => {
   useEffect(() => {
     ls.set(`characters`, characters);
   }, [characters]);
+
+  useEffect(() => {
+    ls.set(`filterName`, filterName);
+  }, [filterName]);
+
+  useEffect(() => {
+    ls.set(`filterGender`, filterGender);
+  }, [filterGender]);
+
+  useEffect(() => {
+    ls.set(`filterSpecies`, filterSpecies);
+  }, [filterSpecies]);
 
   const handleFilter = (data) => {
     if (data.key === "name") {
@@ -58,7 +72,12 @@ const App = () => {
   return (
     <>
       <Header />
-      <Filters handleFilter={handleFilter} />
+      <Filters
+        filterGender={filterGender}
+        filterName={filterName}
+        filterSpecies={filterSpecies}
+        handleFilter={handleFilter}
+      />
       <CharacterList characters={filteredCharacters} />
       <Footer />
     </>

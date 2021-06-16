@@ -1,6 +1,10 @@
 import React from "react";
 
 const CharacterCard = (props) => {
+  const emojis = {
+    Human: "🧑🏾‍🤝‍🧑🏻",
+    Alien: "👽",
+  };
   return (
     <li className="character__card">
       <div className="character__card__img-container">
@@ -13,7 +17,7 @@ const CharacterCard = (props) => {
       </div>
       <h4 className="character__card__name">{props.character.name}</h4>
       <p className="character__card__species">
-        Species: {props.character.species}
+        Species: {emojis[props.character.species]}
       </p>
       <p className="character__card__gender">
         Gender: {props.character.gender}

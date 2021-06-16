@@ -8,11 +8,18 @@ const Filters = (props) => {
     <section className="filter-section">
       <form className="form__input">
         <FilterByName
+          filterName={props.filterName}
           handleFilter={props.handleFilter}
           inputEnterHandler={props.inputEnterHandler}
         />
-        <FilterByGender handleFilter={props.handleFilter} />
-        <FilterBySpecies handleFilter={props.handleFilter} />
+        <FilterByGender
+          filterGender={props.filterGender}
+          handleFilter={props.handleFilter}
+        />
+        <FilterBySpecies
+          filterSpecies={props.filterSpecies}
+          handleFilter={props.handleFilter}
+        />
       </form>
     </section>
   );
