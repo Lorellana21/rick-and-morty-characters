@@ -1,0 +1,14 @@
+.character__list {
+  margin-top: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
