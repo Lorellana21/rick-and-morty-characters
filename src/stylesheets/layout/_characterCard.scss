@@ -6,7 +6,6 @@
   align-items: center;
   width: 250px;
   height: 340px;
-  // background-color: transparent;
   background-color: transparentize(#2ed4da, 0.3);
   margin: 32px 32px;
   border-radius: 20px;
@@ -14,7 +13,6 @@
   color: rgba(0, 0, 0, 0.7);
   position: relative;
   box-shadow: 0 5px 15px 0px rgba(14, 197, 23, 0.4);
-  // text-shadow: 0.5px 0 0 $color-terciary, -1px 0 0 $color-secondary;
   //color: $color-primary;
 
   &__img-container {
