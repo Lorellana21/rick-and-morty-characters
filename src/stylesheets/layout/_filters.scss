@@ -1,0 +1,26 @@
+.filter-section {
+  width: 100%;
+  height: auto;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    width: 700px;
+    margin: 56px 0px 0px;
+  }
+
+  &-label {
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}

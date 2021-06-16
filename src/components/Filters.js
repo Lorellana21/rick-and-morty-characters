@@ -6,7 +6,7 @@ import FilterBySpecies from "./FilterBySpecies";
 const Filters = (props) => {
   return (
     <section className="filter-section">
-      <form>
+      <form className="form__input">
         <FilterByName />
         <FilterByGender />
         <FilterBySpecies />

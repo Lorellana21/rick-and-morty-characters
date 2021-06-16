@@ -3,7 +3,7 @@ import React from "react";
 const FilterByGender = (props) => {
   return (
     <>
-      <label className="form__label-species display-block" htmlFor="gender">
+      <label className="form__input-label" htmlFor="gender">
         Filter by gender:
       </label>
       <select className="form__input-text" name="gender" id="gender">
