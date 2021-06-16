@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &__img-container {
     margin: 20px;
     text-align: center;
@@ -10,7 +11,7 @@
     & img {
       width: 100%;
     }
-    @media (max-width: 767px) {
+    @include tablet {
       margin: 20px;
       width: 600px;
     }
