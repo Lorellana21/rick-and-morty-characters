@@ -1,6 +1,7 @@
-const get = (key) => {
+const get = (key, initial) => {
   const data = localStorage.getItem(key);
   if (data === null) {
+    return initial;
   } else {
     return JSON.parse(data);
   }

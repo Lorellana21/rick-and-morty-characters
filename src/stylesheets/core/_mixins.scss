@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin desktop {
+  @media all and (min-width: 1281px) {
+    @content;
+  }
+}

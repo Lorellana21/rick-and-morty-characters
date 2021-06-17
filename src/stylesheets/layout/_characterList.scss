@@ -1,14 +1,20 @@
 .character__list {
   margin-top: 20px;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
 
   @include tablet {
     margin-top: 40px;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-left: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  @include desktop {
+    margin-top: 60px;
+    margin-left: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }

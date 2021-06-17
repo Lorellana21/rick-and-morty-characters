@@ -8,10 +8,6 @@ const FilterByName = (props) => {
     });
   };
 
-  const inputEnterHandler = (ev) => {
-    ev.preventDefault();
-  };
-
   return (
     <>
       <label className="form__input-label" htmlFor="name">
@@ -25,7 +21,6 @@ const FilterByName = (props) => {
         placeholder="Search"
         value={props.filterName}
         onChange={handleChange}
-        onSubmit={inputEnterHandler}
       />
     </>
   );

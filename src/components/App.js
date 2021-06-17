@@ -8,7 +8,7 @@ import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [filterGender, setFilterGender] = useState(ls.get("filterGender", ""));
   const [filterSpecies, setFilterSpecies] = useState(
@@ -21,7 +21,7 @@ const App = () => {
         setCharacters(charactersData);
       });
     }
-  }, []);
+  }, [characters.length]);
 
   useEffect(() => {
     ls.set(`characters`, characters);
@@ -55,14 +55,14 @@ const App = () => {
       return character.name.toLowerCase().includes(filterName.toLowerCase());
     })
     .filter((character) => {
-      if (filterGender === "all") {
+      if (filterGender === "") {
         return true;
       } else {
         return character.gender === filterGender;
       }
     })
     .filter((character) => {
-      if (filterSpecies === "all") {
+      if (filterSpecies === "") {
         return true;
       } else {
         return character.species === filterSpecies;
