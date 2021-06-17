@@ -6,6 +6,8 @@ import getApiData from "../services/getDataFromApi";
 import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
+import { Link, Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -72,13 +74,20 @@ const App = () => {
   return (
     <>
       <Header />
-      <Filters
-        filterGender={filterGender}
-        filterName={filterName}
-        filterSpecies={filterSpecies}
-        handleFilter={handleFilter}
-      />
-      <CharacterList characters={filteredCharacters} />
+      <Switch>
+        <Route exact path="/">
+          <Filters
+            filterGender={filterGender}
+            filterName={filterName}
+            filterSpecies={filterSpecies}
+            handleFilter={handleFilter}
+          />
+          <CharacterList characters={filteredCharacters} />
+        </Route>
+        <Route exact path="/character.id">
+          <CharacterDetail />
+        </Route>
+      </Switch>
       <Footer />
     </>
   );

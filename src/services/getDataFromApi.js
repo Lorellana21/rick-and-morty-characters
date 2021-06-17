@@ -9,6 +9,9 @@ const getApiData = () => {
           species: character.species,
           gender: character.gender,
           id: character.id,
+          status: character.status,
+          episode: character.episode,
+          origin: character.origin
         };
       });
       return cleanData;
