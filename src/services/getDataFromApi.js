@@ -11,9 +11,10 @@ const getApiData = () => {
           id: character.id,
           status: character.status,
           episode: character.episode,
-          origin: character.origin
+          origin: character.origin.name,
         };
       });
+
       return cleanData;
     });
 };

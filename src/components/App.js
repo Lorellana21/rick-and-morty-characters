@@ -7,7 +7,7 @@ import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -16,6 +16,7 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
+  console.log(characters);
 
   useEffect(() => {
     if (characters.length === 0) {

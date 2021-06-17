@@ -27,8 +27,9 @@ const CharacterDetail = (props) => {
               {props.character.origin}
             </li>
             <li className="character__details--li">
-              <h3 className="character__details--tittle">Number of episode:</h3>
-              {props.character.episode}
+              <h3 className="character__details--tittle">
+                Episodes: {props.character.episode.length}
+              </h3>
             </li>
             <li className="character__details--li">
               <h3 className="character__details--tittle">Status:</h3>
