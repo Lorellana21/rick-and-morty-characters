@@ -81,7 +81,9 @@ const App = () => {
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
     } else {
-      return <h2>Character not found</h2>;
+      return (
+        <h2 className="character__notfound">This character doesn't exist.</h2>
+      );
     }
   };
 

@@ -5,7 +5,13 @@
 }
 
 @mixin desktop {
-  @media all and (min-width: 1281px) {
+  @media all and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin bigDesktop {
+  @media all and (min-width: 1200px) {
     @content;
   }
 }

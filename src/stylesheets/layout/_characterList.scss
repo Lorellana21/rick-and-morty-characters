@@ -13,8 +13,12 @@
   }
   @include desktop {
     margin-top: 60px;
-    margin-left: 80px;
+    margin-left: 40px;
+    margin-right: 100px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  @include bigDesktop {
+    margin-left: 100px;
   }
 }

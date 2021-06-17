@@ -13,6 +13,15 @@
     width: 700px;
     margin: 56px 0px 0px;
   }
+  @include desktop {
+    flex-direction: row;
+    margin-left: 100px;
+  }
+  @include bigDesktop {
+    flex-direction: row;
+    width: 1200px;
+    margin-left: 100px;
+  }
 
   &-label {
     margin: 10px;
@@ -23,5 +32,15 @@
     @include tablet {
       font-size: 20px;
     }
+  }
+}
+.character__notfound {
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+
+  @include tablet {
+    font-size: 20px;
   }
 }
