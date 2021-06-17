@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const CharacterCard = (props) => {
   const emojis = {
@@ -12,7 +13,7 @@ const CharacterCard = (props) => {
           className="character__card__img"
           src={props.character.image}
           alt={`Imagen de ${props.character.name}`}
-          title={`Imagen de ${props.name}`}
+          title={`Imagen de ${props.character.name}`}
         />
       </div>
       <h4 className="character__card__name">{props.character.name}</h4>
@@ -26,3 +27,14 @@ const CharacterCard = (props) => {
   );
 };
 export default CharacterCard;
+
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    gender: PropTypes.string,
+    species: PropTypes.string,
+    image: PropTypes.string,
+    status: PropTypes.string,
+  }),
+};

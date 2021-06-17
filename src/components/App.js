@@ -6,9 +6,10 @@ import getApiData from "../services/getDataFromApi";
 import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
 
 const App = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   const [filterGender, setFilterGender] = useState(ls.get("filterGender", ""));
   const [filterSpecies, setFilterSpecies] = useState(
