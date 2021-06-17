@@ -29,3 +29,14 @@ const CharacterCard = (props) => {
   );
 };
 export default CharacterCard;
+
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    gender: PropTypes.string,
+    species: PropTypes.string,
+    image: PropTypes.string,
+    status: PropTypes.string,
+  }),
+};
