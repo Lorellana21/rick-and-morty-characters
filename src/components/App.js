@@ -7,7 +7,7 @@ import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-import { Route, Switch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [characters, setCharacters] = useState(ls.get("characters", []));
@@ -82,7 +82,10 @@ const App = () => {
       return <CharacterDetail character={foundCharacter} />;
     } else {
       return (
-        <h2 className="character__notfound">This character doesn't exist.</h2>
+        <>
+          <Link to="/">Back</Link>
+          <h2 className="character__notfound">This character doesn't exist.</h2>
+        </>
       );
     }
   };
@@ -100,11 +103,15 @@ const App = () => {
           />
           <CharacterList characters={filteredCharacters} />
         </Route>
-        <Route
-          exact
-          path="/character/:charId"
-          render={renderCharacterDetail}
-        ></Route>
+        <Route exact path="/character/:charId" render={renderCharacterDetail} />
+        <Route>
+          <>
+            <Link to="/">Back</Link>
+            <h2 className="character__notfound">
+              This character doesn't exist.
+            </h2>
+          </>
+        </Route>
       </Switch>
       <Footer />
     </>
