@@ -71,6 +71,19 @@ const App = () => {
       }
     });
 
+  const renderCharacterDetail = (props) => {
+    const routeCharId = parseInt(props.match.params.charId);
+    const foundCharacter = characters.find((character) => {
+      return character.id === routeCharId;
+    });
+
+    if (foundCharacter !== undefined) {
+      return <CharacterDetail character={foundCharacter} />;
+    } else {
+      return <h2>Character not found</h2>;
+    }
+  };
+
   return (
     <>
       <Header />
@@ -84,9 +97,11 @@ const App = () => {
           />
           <CharacterList characters={filteredCharacters} />
         </Route>
-        <Route exact path="/character.id">
-          <CharacterDetail />
-        </Route>
+        <Route
+          exact
+          path="/character/:charId"
+          render={renderCharacterDetail}
+        ></Route>
       </Switch>
       <Footer />
     </>

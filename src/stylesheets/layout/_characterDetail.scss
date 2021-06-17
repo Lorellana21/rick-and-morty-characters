@@ -1,0 +1,99 @@
+.details {
+  margin: 40px auto;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.character__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+  background-color: greenyellow;
+  margin: 40px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #2ed4da, 0.3;
+  box-shadow: greenyellow;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 360px;
+  }
+
+  &__img-container {
+    border-radius: 100%;
+    height: 200px;
+    @include tablet {
+      height: 250px;
+    }
+
+    img {
+      border-radius: 100%;
+      height: 100%;
+    }
+  }
+  &--info {
+    margin-left: 0px;
+    padding-top: 20px;
+    @include tablet {
+      margin-left: 32px;
+      padding-top: 0px;
+    }
+  }
+  &--name {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+    @include tablet {
+      padding-top: 0px;
+    }
+  }
+
+  &--li {
+    text-align: center;
+    padding-bottom: 16px;
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &--tittle {
+    text-align: center;
+    padding-bottom: 8px;
+    @include tablet {
+      text-align: left;
+    }
+  }
+}
+
+.left-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: greenyellow;
+  border-radius: 50px;
+  text-align: center;
+  position: absolute;
+  top: -60px;
+  font-weight: 900;
+  color: black;
+}
