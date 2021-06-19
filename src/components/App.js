@@ -16,7 +16,6 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
-  console.log(characters);
 
   useEffect(() => {
     if (characters.length === 0) {

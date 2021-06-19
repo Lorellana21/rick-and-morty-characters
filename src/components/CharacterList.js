@@ -21,8 +21,7 @@ const CharacterList = (props) => {
     </section>
   );
 };
-export default CharacterList;
-
 CharacterList.propsTypes = {
   characters: PropTypes.array,
 };
+export default CharacterList;

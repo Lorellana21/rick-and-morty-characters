@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const FilterByGender = (props) => {
   const handleChange = (ev) => {
@@ -25,5 +26,9 @@ const FilterByGender = (props) => {
       </select>
     </>
   );
+};
+
+FilterByGender.propTypes = {
+  handleFilter: PropTypes.func,
 };
 export default FilterByGender;

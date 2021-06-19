@@ -42,8 +42,6 @@ const CharacterDetail = (props) => {
   );
 };
 
-export default CharacterDetail;
-
 CharacterDetail.propTypes = {
   user: PropTypes.shape({
     id: PropTypes.number,
@@ -55,3 +53,4 @@ CharacterDetail.propTypes = {
     image: PropTypes.string,
   }),
 };
+export default CharacterDetail;

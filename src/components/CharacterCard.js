@@ -29,7 +29,6 @@ const CharacterCard = (props) => {
     </Link>
   );
 };
-export default CharacterCard;
 
 CharacterCard.propTypes = {
   character: PropTypes.shape({
@@ -41,3 +40,5 @@ CharacterCard.propTypes = {
     status: PropTypes.string,
   }),
 };
+
+export default CharacterCard;
